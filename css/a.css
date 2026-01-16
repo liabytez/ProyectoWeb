@@ -1,26 +1,101 @@
 * {
-    margin: 0;
-    left: 0;
-    top: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
 }
 
 :root {
-    --background: rgb(223, 182, 207);
+  --primaryLight: #FBECE6;
+  --primaryDark: #DDC5BC;
+  --secondaryLight: #42281D;
+  --secondaryDark: #111111;
+  --teriaryLight: #994d47;
+  --teriaryDark: #66281F;
 }
 
-header {
-    background-color: var(--background);
+body {
+  background-color: var(--primaryLight);
 }
 
-div {
-    background: var(--background);
-    border-radius: 2rem;
-    margin: 2rem;
-    padding: 1rem;
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondaryLight);
+  display: flex;
+}
 
+nav a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: var(--primaryLight);
+}
+
+nav a:hover {
+  background-color: var(--primaryLight);
+  color: var(--secondaryLight);
+}
+
+.main {
+  background: var(--primaryDark);
+  border-radius: 2rem;
+  margin: 2rem;
+  padding: 1rem;
+  color: var(--secondaryLight);
 }
 
 .column {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2 {
+  text-align: center;
+  color: var(--secondaryLight);
+}
+
+.popular {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+ max-width: 1000px; 
+  margin: auto;
+  color: var(--secondaryLight);
+}
+
+.cupcake-card {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cupcake-card img {
+  width: 150px;
+  transition: opacity 0.3s ease;
+}
+
+.img-hover {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.cupcake-card:hover .img-default {
+  opacity: 0;
+}
+
+.cupcake-card:hover .img-hover {
+  opacity: 1;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+  color: var(--secondaryLight);
 }
